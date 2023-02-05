@@ -1,6 +1,7 @@
 from django.conf.urls import url
-
 from datacenter import views
+from django.urls import include, path
+
 
 urlpatterns = [
     url(r'^$', views.view_classes, name='classes'),
@@ -18,4 +19,10 @@ urlpatterns = [
         r'(?P<letter>[\w+ ]+)/'
         r'(?P<subject_id>[\w+ ]+)/$',
         views.view_journal, name='journal'),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
+
+
+
+
+

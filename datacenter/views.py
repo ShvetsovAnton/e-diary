@@ -8,6 +8,7 @@ from datacenter.models import (Chastisement, Commendation, Lesson, Mark,
                                Schoolkid, Subject)
 
 
+
 def get_iso_week_from_params(get_params):
     week_number = get_params.get('week', '')
     year_number = get_params.get('year', '')
